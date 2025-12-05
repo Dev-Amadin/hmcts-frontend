@@ -1,27 +1,82 @@
-# HmctsFrontend
+# HMCTS Task Management – Angular Frontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.0.
+This is the frontend application for the HMCTS Task Management system.  
+It is built using **=Angular 17**, **Standalone Components**, **Reactive Forms**, and **TailwindCSS**.
 
-## Development server
+## Features
+- View list of tasks  
+- Create a new task  
+- Update existing tasks  
+- Delete tasks  
+- Communicates with a Spring Boot backend API  
+- Uses HttpClient for CRUD operations  
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Project Structure
+src/app
+─ task/
+ ─ task.component.ts
+ ─ task.component.html
+ ─ task.service.ts
+ ─ task.model.ts
+─ app.component.ts
+─ app.config.ts
 
-## Code scaffolding
+## ▶️ Running the App
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Install dependencies:
 
-## Build
+```bash
+npm install
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Start the development server:
 
-## Running unit tests
+```bash
+ng serve
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+The app runs at:
 
-## Running end-to-end tests
+```
+http://localhost:4200
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+---
 
-## Further help
+## API Configuration
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+The frontend communicates with the backend using:
+
+```
+environment.serverUrl = 'http://localhost:8080/api/hmcts';
+```
+
+Example request:
+
+```ts
+this.http.get<Task[]>(`${this.url}`);
+```
+
+---
+
+## Angular Testing
+
+Run all frontend unit tests:
+
+```bash
+ng test
+```
+
+Includes tests for:
+- Component creation  
+- Service HTTP calls (using HttpTestingController)
+
+---
+
+## Requirements
+- Node.js 18+
+- Angular CLI
+- Spring Boot backend running locally
+
+## 📄 License
+For educational and demonstration purposes.
