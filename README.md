@@ -21,7 +21,7 @@ src/app
 ─ app.component.ts
 ─ app.config.ts
 
-## ▶️ Running the App
+## Running the App
 
 Install dependencies:
 
