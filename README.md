@@ -78,5 +78,3 @@ Includes tests for:
 - Angular CLI
 - Spring Boot backend running locally
 
-## 📄 License
-For educational and demonstration purposes.
